@@ -1,5 +1,7 @@
 # NothingHome
 
+![NothingHome Screenshot](./screenshot.png)
+
 A sleek, "Nothing"-inspired New Tab Page extension for Google Chrome. It replaces your default new tab page with a minimalist, tech-brutalism aesthetic featuring dynamic widgets and essential tools.
 
 ## ✨ Features
