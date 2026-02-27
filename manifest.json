@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "NothingHome",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "Nothing-style New Tab Page",
     "chrome_url_overrides": {
         "newtab": "index.html"
@@ -13,7 +13,8 @@
         "favicon",
         "system.cpu",
         "system.memory",
-        "unlimitedStorage"
+        "unlimitedStorage",
+        "search"
     ],
     "host_permissions": [
         "https://api.open-meteo.com/*"

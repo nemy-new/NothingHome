@@ -470,6 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initShortcutModal();
     initMemo();
     initWallpaper();
+    initSearch(); // Added search initialization
     setInterval(updateClock, 1000);
 });
 
@@ -571,4 +572,26 @@ function initWallpaper() {
             });
         };
     }
+}
+
+function initSearch() {
+    const searchInput = document.getElementById('main-search-input');
+    if (!searchInput) return;
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+                if (typeof chrome !== 'undefined' && chrome.search) {
+                    chrome.search.query({ text: query, disposition: 'CURRENT_TAB' }, () => {
+                        // Optional: Clear input or handle errors if search fails
+                    });
+                } else {
+                    // Fallback for local testing outside extension environment
+                    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                }
+            }
+        }
+    });
 }
