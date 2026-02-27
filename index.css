@@ -554,6 +554,7 @@ body.theme-light:not(.no-hover-effects) .ai-shortcut-btn.custom-link:hover {
 }
 
 .search-pill {
+    width: 100%;
     background: var(--pill-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
